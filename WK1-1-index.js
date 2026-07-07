@@ -1,6 +1,8 @@
 // const fs = require("fs")
 
-const {readFile, writeFile, appendFile} = require("fs/promises")
+const { unlink, mkdirSync } = require("fs")
+const os = require("os")
+const {readFile, writeFile, appendFile, mkdir} = require("fs/promises")
 
 console.log("hello world")
 
@@ -19,9 +21,22 @@ console.log(__filename)
 const Main = async() => {
     // const WriteTxt = await writeFile("text.txt", "Adeoluwa")
     const LineByLineTxt = await appendFile("text.txt", " corper")
-    const ReadTxt = await readFile("./text.md", "utf8")
-    console.log(ReadTxt);
+    const ReadTxt = await readFile("./data.json", "utf8")
+
+    // const deleteTxt = await unlink("text.md", (err) => {
+    //     if (err) throw err;
+    //     console.log("file deleted succesfully")
+    // })
+
+    // const createfolder = await mkdir("./src", (err) => {
+    //      if (err) throw err;
+    //     console.log("folder created succesfully")
+    // })
+    console.log(JSON.parse(ReadTxt));
 }
 
 Main();
 
+console.log(os.platform());
+console.log(os.arch());
+console.log(os.type())
