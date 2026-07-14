@@ -427,7 +427,7 @@ app.listen(PORT, () => {
 | Routing | Manual `if/else` | `app.get()` per route |
 | Setting Content-Type | `res.writeHead(200, {...})` | Automatic with `res.json()` |
 | Converting to JSON | `JSON.stringify(data)` | `res.json(data)` |
-| Ending the response | `res.end(...)` | Automatic |
+| Ending the response | `res.end(...)` | `res.send` or `res.json` |
 | Adding a new route | Another `if/else` block | One new `app.get()` line |
 | Reading URL params | Parse manually | `req.params.id` |
 
