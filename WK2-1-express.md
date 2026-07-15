@@ -448,16 +448,9 @@ app.listen(PORT, () => {
 
 ---
 
-## ✅ Day 9 Checklist
-- [ ] Can explain what Express is and how it sits on top of Node's `http` module
-- [ ] Know how to install Express and set up a project with nodemon
-- [ ] Can define routes with `app.get()`, `app.post()`, `app.put()`, `app.delete()`
-- [ ] Understand the difference between `req` and `res` in Express vs raw Node
-- [ ] Know when to use `res.send()`, `res.json()`, and `res.status().json()`
-- [ ] Know common HTTP status codes and when to use each
-- [ ] Built the Express server and tested all routes in Postman
+
 
 ## 💡 Homework
 1. Add a `PUT /users/:id` route that finds a user by id and updates their name from `req.body`. Return 404 if the user doesn't exist.
 2. Add a `DELETE /users/:id` route that removes a user from the array. Return 404 if not found, 204 if deleted successfully.
-3. **Bonus:** Add a `GET /users` route that accepts a query parameter — `GET /users?name=ada` — and filters the results to only return users whose name contains that search term (case insensitive). Hint: use `req.query.name` and `.filter()`.
+
