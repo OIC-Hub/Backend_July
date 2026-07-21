@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv")
 const userRoute = require("./routes/user.route")
+const connectDB = require("./config/db")
 dotenv.config();
 
 const app = express();
@@ -54,6 +55,7 @@ const PORT = process.env.PORT
 //     res.status(201).json({message: "User created successfully", users})
 // })
 
+connectDB();
 app.listen(PORT, () => {
     console.log(`Server Running at ${PORT}`)
 })
